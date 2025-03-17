@@ -123,7 +123,7 @@ def fight():
 
 
 def play_again():
-      while True:
+    while True:
         choice = input("Would you like to play again? (y/n): ").strip().lower()
         if choice == 'y':
             return True
