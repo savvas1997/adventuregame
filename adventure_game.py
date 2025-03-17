@@ -9,9 +9,11 @@ def print_pause(message, wait_time=1):
 
 def intro():
     print_pause(
-        "You find yourself standing in an open field, surrounded by tall grass and yellow wildflowers.")
+        "You find yourself standing in an open field, surrounded by "
+        "tall grass and yellow wildflowers.")
     print_pause(
-        "Rumor has it that a dangerous creature is lurking nearby, terrorizing the village.")
+        "Rumor has it that a dangerous creature "
+        "is lurking nearby, terrorizing the village.")
     print_pause("In front of you stands a mysterious house.")
     print_pause("To your right, you see a dark cave.")
     print_pause("To your left, there's an old armory.")
@@ -121,8 +123,14 @@ def fight():
 
 
 def play_again():
-    choice = input("Would you like to play again? (y/n): ").strip().lower()
-    return choice == 'y'
+      while True:
+        choice = input("Would you like to play again? (y/n): ").strip().lower()
+        if choice == 'y':
+            return True
+        elif choice == 'n':
+            return False
+        else:
+            print_pause("Invalid choice, try again.")
 
 
 def start_game():
